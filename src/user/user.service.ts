@@ -37,7 +37,7 @@ export class UserService {
         .addSelect('COUNT(user.party_name)', 'count')     // u can add more elements by adding addSelect method.
         .groupBy('user.party_name')
         .orderBy('count', 'DESC')
-        .limit(2)
+        .limit(1)
         .getRawOne();
         // console.log(winner)
       return { winner_party: winner };
